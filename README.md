@@ -86,13 +86,47 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 **Preguntas**
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+
+    > Se crean 3 recursos
+    > * Red Virtual
+    > * Grupos de seguridad 
+    > * Ip's
+
 2. ¿Brevemente describa para qué sirve cada recurso?
+
+    > VNet de Azure: Es un bloque de construcción fundamental para crear la red privada en Azure
+    
+    > Public IP: Es la dirección de Protocolo de Internet, registrada por varios servidores / dispositivos.
+
+    > Private IP: Es la dirección para identificar equipos en una red privada
+
+    > Grupos de seguridad: Sirven para filtrar el tréfico de red hacia y desde los recursos de Azure por la red privada del servicio. 
+
+
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+
+    > Estos procesos quedan asociados al usuario que realizo la conexión, al momento de desconectarnos estos procesos ya no correran porque el usuario ya no esta conectado. 
+
+    > Para que atravez de nuestra ip o cualquier ip podamos tener conexión a ese puerto
+
+
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+
+    > ![Tabla](images/part1/tabla.png)
+
+    > ![Tabla](images/part1/tabla2.png)
+
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+    > Consumo muchos recursos porque esta solución hace muchas iteraciones para retornar la respuesta
+
+    > ![Tabla](images/part1/consumo.png)
+
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+
     * Tiempos de ejecución de cada petición.
+
     * Si hubo fallos documentelos y explique.
+
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
