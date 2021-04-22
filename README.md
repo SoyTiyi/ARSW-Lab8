@@ -128,9 +128,13 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     * Si hubo fallos documentelos y explique.
 
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+    * B1ls tiene menos capacidad y es mas economica, su unico sistema disponible es linux
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+    * No se observa una mejora sustancial tras aumentar el tamaño de la VM, lo cual no es que sea la mejor solución para mejorar el rendimiento
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+    * Se debe reiniciar la maquina y volver hacer la conexión ssh, esto implica que esta maquina estara deshabilitada durante el tiempo de reinicio
 10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+    * Si, porque se disponen de mas recursos para hacer los calculos
 11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
 ### Parte 2 - Escalabilidad horizontal
